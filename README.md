@@ -14,7 +14,7 @@ To ensure the container user will have the same UID as the host user, we provide
 
 ```
 docker run \
-    --rm 
+    --rm \
     --volume $(pwd):/src \
     --volume ~/.depcheck/data:/usr/share/dependency-check/data \
     --volume ~/.depcheck/report:/report \
