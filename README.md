@@ -11,7 +11,6 @@ To do so, we use a custom entrypoint that creates a new user at runtime matching
 
 To ensure the container user will have the same UID as the host user, we provide the host user UID to docker as environment variable.
 
-
 ```
 docker run \
     --rm \
