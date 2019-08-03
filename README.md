@@ -16,9 +16,14 @@ To ensure the container user will have the same UID as the host user, we provide
 docker run \
     --rm 
     --volume $(pwd):/src \
-    --volume /tmp/depcheck/data:/usr/share/dependency-check/data \
-    --volume /tmp/depcheck/report:/report \
+    --volume ~/.depcheck/data:/usr/share/dependency-check/data \
+    --volume ~/.depcheck/report:/report \
     -e uid=$UID \
     donhector/depcheck \
-    /usr/share/dependency-check/bin/dependency-check.sh --scan /src --format HTML --project "MyProject" --out /report
+    /usr/share/dependency-check/bin/dependency-check.sh \
+        --scan /src \
+        --format HTML \
+        --project "MyProject" \
+        --out /report \
+        --log /report/scan.log
 ```
