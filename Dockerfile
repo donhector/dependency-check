@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-slim
 
-MAINTAINER hector_molina@mcafee.com
+MAINTAINER https://github.com/donhector
 
 ENV version_url=https://jeremylong.github.io/DependencyCheck/current.txt
 ENV download_url=https://dl.bintray.com/jeremy-long/owasp
